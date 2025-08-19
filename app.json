@@ -21,7 +21,7 @@
       "favicon": "./assets/images/favicon.png"
     },
     "android": {
-      "package": "com.yourcompany.yourapp"
+      "package": "com.strivainc.striva"
     },
     "plugins": [
       "expo-router",
