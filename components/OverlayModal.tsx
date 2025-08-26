@@ -90,11 +90,10 @@ export default function OverlayModal({
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        
-        Alert.alert(
-          'Downloaded!',
-          'Your goal overlay has been downloaded to your device.\n\nJoin the Striva crew! Text "Striva" to 954-644-9294 for updates + feature drops',
-          [{ text: 'Got it!', style: 'default' }]
+
+        // Use window.alert for web
+        window.alert(
+          'Your goal overlay has been downloaded to your device.\n\nJoin the Striva crew! Text "Striva" to 954-644-9294 for updates + feature drops'
         );
       } else {
         // For mobile, save to photo library
@@ -154,7 +153,6 @@ export default function OverlayModal({
                   result: 'tmpfile',
                   width: overlayWidth,
                   height: overlayHeight,
-                  backgroundColor: 'rgba(0,0,0,0)',
                 }}
                 style={styles.viewShot}
               >
