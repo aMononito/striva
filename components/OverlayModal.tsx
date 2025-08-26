@@ -65,6 +65,9 @@ export default function OverlayModal({
 
     setIsGenerating(true);
     try {
+      if (!viewShotRef.current || !viewShotRef.current.capture) {
+        throw new Error('ViewShot ref or capture method is not available');
+      }
       const uri = await viewShotRef.current.capture();
       setGeneratedImage(uri);
     } catch (error) {
